@@ -9,17 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    //MARK: Properties
+    @IBOutlet weak var printLbl: UILabel!
+    
+    @IBOutlet weak var playerHp: UILabel!
+    
+    @IBOutlet weak var enemyHp: UILabel!
+    
+    @IBOutlet weak var enemyImg: UIImageView!
+    
+    @IBOutlet weak var lootBox: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func onClickLoot(sender: UIButton) {
     }
-
-
+    
 }
 
