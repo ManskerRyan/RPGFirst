@@ -10,11 +10,11 @@ import Foundation
 
 class Character {
     private var _hp: Int = 100
-    private var _attPwr: Int = 10
+    private var _attackPwr: Int = 10
     
-    var attPwr: Int {
+    var attackPwr: Int {
         get {
-            return _attPwr
+            return _attackPwr
         }
     }
     
@@ -34,13 +34,14 @@ class Character {
         }
     }
     
-    init(startingHp: Int, attPwr: Int) {
+    init(startingHp: Int, attackPwr: Int) {
         self._hp = startingHp
-        self._attPwr = attPwr
+        self._attackPwr = attackPwr
     }
     
     func attemptAttack(attackPwr: Int) -> Bool {
-        self._attPwr -= attackPwr
+        self._hp = self._hp - attackPwr
+        
         return true
     }
 }

@@ -19,13 +19,16 @@ class Player: Character {
     }
     
     var inventory: [String] {
-        get {
-            return _inventory
-        }
+        return _inventory
+    }
+    
+    func addItemToInventory(item: String) {
+        _inventory.append(item)
     }
     
     convenience init(name: String, hp: Int, attPwr: Int) {
-        self.init(startingHp: hp, attPwr: attPwr)
+        self.init(startingHp: hp, attackPwr: attPwr)
+        
         _name = name
     }
 }
